@@ -1,0 +1,58 @@
+
+nav{
+    background: #F8F7F3; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav a{
+    margin-left: 3vw;
+}
+.navbar-brand img{
+    border: solid black;
+    width: 5vw;
+    /* margin-left: 5vw;
+    margin-right: 2vw; */
+  
+}
+
+.right-side img{
+    /* border: solid black; */
+    width: 4vw;
+}
+
+.d-flex{
+    border: solid black;
+    width: 40vw;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+}
+
+.recommendation{
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+}
+
+.best{
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+}
+
+.author{
+    display: flex;
+    /* justify-content: center; */
+    margin-left: 7vw;
+    margin-top: 4vh;
+}
+
+.discuss{
+    display: flex;
+    /* justify-content: center; */
+    margin-left: 7vw;
+    margin-top: 4vh;
+}
