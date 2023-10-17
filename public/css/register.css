@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.nav-brand{
+    padding-left: 2.5vw;
+}
+
+.login{
+    display: flex;
+    justify-content: space-around;
+    font-family: Montserrat;
+}
+
+.left_side{
+    text-align: center;
+}
+
+.left_side p{
+    padding-top: 2vh;
+    margin: 0;
+    font-size: 3vw;
+    font-weight: 300;
+}
+
+.left_side span{
+    padding-top: 1vh;
+    font-size: 1.5vw;
+}
+
+.left_side>img{
+    padding-top: 8vh;
+    height: auto;
+    width: 35vw;
+}
+
+.register_account{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.right_side{
+    justify-content: left;
+}
+
+.form h1{
+    margin-bottom: 10px;
+}
+
+.form p{
+    font-size: 1rem;
+    padding-top: 2vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-weight: 600;
+}
+
+.form>input{
+    width: 40vw;
+    height: 30px;
+    background-color: #ffffff;
+}
+
+.login_button{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.login_button>a>input{
+    font-style: normal;
+    height: auto;
+    width: 40vw;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 1vw;
+    color: #000000;
+    padding: 1vw 1vh 1vw 1vh;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 900;
+}
