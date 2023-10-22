@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liber Primus</title>
 
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 </head>
 
 <body>
     <div class="login">
         <div class="left_side">
-            <img src="./public/images/Logo.png" alt="">
+            <img src="{{url('/images/logo.png')}}" alt="">
             
             <p>Door To Knowledge</p>
             <span>Get your best quality books here!</span>
