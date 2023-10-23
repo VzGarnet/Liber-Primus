@@ -38,7 +38,6 @@
                 
                 <form class="d-flex">
                   <input class="form-control me-2" type="text" placeholder="Search">
-                  <button class="btn btn-primary" type="button">Search</button>
                 </form>
                 
                 <ul class="right-side">
@@ -60,7 +59,7 @@
           </nav>
 
           <div class="banner">
-            <img src="{{url('/images/banner.png')}}" alt="">
+            <img src="{{url('/images/Banner.jpg')}}" alt="">
           </div>
 
           <div class="recommendation">
@@ -78,9 +77,5 @@
           <div class="discuss">
             <img src="{{url('/images/Discussion.png')}}" alt="">
           </div>
-
-
-
-
 </body>
 </html>

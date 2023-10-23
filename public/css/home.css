@@ -7,21 +7,23 @@ nav{
 nav a{
     margin-left: 3vw;
 }
+
 .navbar-brand img{
-    border: solid black;
     width: 5vw;
     /* margin-left: 5vw;
     margin-right: 2vw; */
-  
 }
 
 .right-side img{
-    /* border: solid black; */
-    width: 4vw;
+    width: auto;
+    height: 7vh;
+}
+
+.right-side>a{
+    text-decoration: none;
 }
 
 .d-flex{
-    border: solid black;
     width: 40vw;
 }
 
