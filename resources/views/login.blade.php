@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liber Primus</title>
 
-    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 
 </head>
 
@@ -37,17 +37,6 @@
 
                 <p id="error" style="color: red; font-size: 15px"></p>
             </form>
-
-            <div class="line_or">
-                <hr>
-                <span class="or_text">or</span>
-                <hr>
-            </div>
-
-            <div class="google_button">
-                <input type="submit" value="Continue with google">
-            </div>
-
         </div>
     </div>
 </body>
