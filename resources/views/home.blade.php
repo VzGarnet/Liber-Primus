@@ -11,6 +11,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -76,6 +77,18 @@
 
           <div class="discuss">
             <img src="{{url('/images/Discussion.png')}}" alt="">
+          </div>
+
+          <div class="footer">
+              <div class="upper-footer">
+                  <a href=""> <img src="{{url('/images/fb.png')}}" alt=""> </a>
+                  <a href=""> <img src="{{url('/images/twitter.png')}}" alt=""> </a>
+                  <a href=""> <img src="{{url('/images/google.png')}}" alt=""> </a>
+                  <a href=""> <img src="{{url('/images/ig.png')}}" alt=""> </a>
+              </div>
+              <div class="lower-footer">
+                  <span>©2023 Copyright: Liber Primus</span>
+              </div>
           </div>
 </body>
 </html>
