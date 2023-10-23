@@ -17,7 +17,7 @@
             <p>Door To Knowledge</p>
             <span>Get your best quality books here!</span>
             <div class="register_account">
-                <span>Already have an account? <a href="login.html">Log In.</a></span>
+                <span>Already have an account? <a href="login.blade.php">Log In.</a></span>
             </div>
         </div>
 
