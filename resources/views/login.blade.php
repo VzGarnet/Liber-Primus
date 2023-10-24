@@ -18,12 +18,12 @@
             <p>Door To Knowledge</p>
             <span>Get your best quality books here!</span>
             <div class="register_account">
-                <span>No account? <a href="register.blade.php">Create an Account!</a></span>
+                <span>No account? <a href="register">Create an Account!</a></span>
             </div>
         </div>
 
         <div class="right_side">
-            <form class="form" action="home.html" onsubmit="return validate()">
+            <form class="form" action="home" onsubmit="return validate()">
                 <h1>Welcome!</h1>
                 <span>Sign in to continue.</span>
                 <p class="sub_title">Username</p>
