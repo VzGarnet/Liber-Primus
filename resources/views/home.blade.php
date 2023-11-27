@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/cardbox.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -62,13 +63,81 @@
           <div class="banner">
             <img src="{{url('/images/Banner.jpg')}}" alt="">
           </div>
-
+          
           <div class="recommendation">
-            <img src="{{url('/images/Recommendation.png')}}" alt="">
+            <div class="recommendation_title">
+              <span>Recommendation</span>
+            </div>
+            <div class="recommendation_content">
+              <div class="cardbox">
+                <img src="{{url('/images/miko.jpg')}}" alt="">
+                <span>Ono Eriko</span>
+                <p>Hai, Miiko! 34</p>
+                <h2>Rp 51.000</h2>
+              </div>
+              <div class="cardbox">
+                <img src="{{url('/images/miko.jpg')}}" alt="">
+                <span>Ono Eriko</span>
+                <p>Hai, Miiko! 34</p>
+                <h2>Rp 51.000</h2>
+              </div>
+              <div class="cardbox">
+                <img src="{{url('/images/miko.jpg')}}" alt="">
+                <span>Ono Eriko</span>
+                <p>Hai, Miiko! 34</p>
+                <h2>Rp 51.000</h2>
+              </div>
+              <div class="cardbox">
+                <img src="{{url('/images/miko.jpg')}}" alt="">
+                <span>Ono Eriko</span>
+                <p>Hai, Miiko! 34</p>
+                <h2>Rp 51.000</h2>
+              </div>
+              <div class="cardbox">
+                <img src="{{url('/images/miko.jpg')}}" alt="">
+                <span>Ono Eriko</span>
+                <p>Hai, Miiko! 34</p>
+                <h2>Rp 51.000</h2>
+              </div>
+            </div>
           </div>
           
-          <div class="best">
-            <img src="{{url('/images/Best Seller.png')}}" alt="">
+          <div class="recommendation">
+            <div class="recommendation_title">
+              <span>Best Seller</span>
+            </div>
+            <div class="recommendation_content">
+              <div class="cardbox">
+                <img src="{{url('/images/miko.jpg')}}" alt="">
+                <span>Ono Eriko</span>
+                <p>Hai, Miiko! 34</p>
+                <h2>Rp 51.000</h2>
+              </div>
+              <div class="cardbox">
+                <img src="{{url('/images/miko.jpg')}}" alt="">
+                <span>Ono Eriko</span>
+                <p>Hai, Miiko! 34</p>
+                <h2>Rp 51.000</h2>
+              </div>
+              <div class="cardbox">
+                <img src="{{url('/images/miko.jpg')}}" alt="">
+                <span>Ono Eriko</span>
+                <p>Hai, Miiko! 34</p>
+                <h2>Rp 51.000</h2>
+              </div>
+              <div class="cardbox">
+                <img src="{{url('/images/miko.jpg')}}" alt="">
+                <span>Ono Eriko</span>
+                <p>Hai, Miiko! 34</p>
+                <h2>Rp 51.000</h2>
+              </div>
+              <div class="cardbox">
+                <img src="{{url('/images/miko.jpg')}}" alt="">
+                <span>Ono Eriko</span>
+                <p>Hai, Miiko! 34</p>
+                <h2>Rp 51.000</h2>
+              </div>
+            </div>
           </div>
 
           <div class="author">
