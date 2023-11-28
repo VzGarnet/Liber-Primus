@@ -12,6 +12,6 @@ class BookGenreSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        
     }
 }
