@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('title');
             $table->foreignId('author_id');
             $table->string('isbn');
-            $table->foreignId('genre_id');
             $table->text('synopsis');
             $table->integer('price');
             $table->foreignId('publisher_id');

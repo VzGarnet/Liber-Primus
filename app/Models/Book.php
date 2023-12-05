@@ -10,7 +10,7 @@ class Book extends Model
     use HasFactory;
 
     protected $fillable = [
-        'title', 'author_id', 'isbn', 'genre_id', 'synopsis', 'price', 'publisher_id', 'rating', 'image', 'stock'
+        'title', 'author_id', 'isbn', 'synopsis', 'price', 'publisher_id', 'rating', 'image', 'stock'
     ];
 
     // foreign key
