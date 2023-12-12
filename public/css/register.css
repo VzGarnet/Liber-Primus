@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-.nav-brand{
-    padding-left: 2.5vw;
-}
-
 .login{
     display: flex;
     justify-content: space-around;
     font-family: Montserrat;
+    height: 99vh;
+    background: linear-gradient(to bottom, #ffffff, #C6EFEF);
 }
 
 .left_side{
@@ -60,6 +58,7 @@
     width: 40vw;
     height: 30px;
     background-color: #ffffff;
+    border-radius: 5px;
 }
 
 .login_button{
@@ -73,10 +72,9 @@
     font-style: normal;
     height: auto;
     width: 40vw;
-    background-color: #000000;
-    border: none;
+    background-color: white;
     border-radius: 1vw;
-    color: #ffffff;
+    color: black;
     padding: 1vw 1vh 1vw 1vh;
     text-decoration: none;
     display: inline-block;

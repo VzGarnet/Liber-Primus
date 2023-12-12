@@ -11,4 +11,5 @@ class BookController extends Controller
         $books = Book::all();
         return view('home', compact('books'));
     }
+
 }

@@ -11,4 +11,9 @@ class AuthorController extends Controller
         $authors = Author::all();
         return view('home', compact('authors'));
     }
+
+    public function author(){
+        $authors = Author::all();
+        return view('author', compact('authors'));
+    }
 }
