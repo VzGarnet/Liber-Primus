@@ -14,8 +14,29 @@ class AuthorSeeder extends Seeder
     public function run(): void
     {
         DB::table('authors')->insert([
-            'name' => 'John',
-            'image' => '/images/authN.jpg',
+            'name' => 'Ono Eriko',
+            'image' => '/images/OnoEriko.jpg',
         ]);
+
+        DB::table('authors')->insert([
+            'name' => 'Leila S. Chudori',
+            'image' => '/images/LeilaSChudori.jpeg',
+        ]);
+
+        DB::table('authors')->insert([
+            'name' => 'Axie Oh',
+            'image' => '/images/AxieOh.jpg',
+        ]);
+
+        DB::table('authors')->insert([
+            'name' => 'James Clear',
+            'image' => '/images/JamesClear.png',
+        ]);
+
+        DB::table('authors')->insert([
+            'name' => 'Aka Akasaka',
+            'image' => '/images/AkaAkasaka.jpg',
+        ]);
+
     }
 }

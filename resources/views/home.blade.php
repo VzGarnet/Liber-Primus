@@ -21,12 +21,15 @@
             <a class="absolute top-0 right-20" href=""><h1 class="font-bold text-2xl underline text-[#01C7C8]">View All</h1></a>
         </div>                         
         <div class="grid grid-cols-5 pb-5">
-            <div class="flex flex-col text-left bg-white border border-black/[0.2] p-4 rounded-lg shadow-md" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
-                <img class='' src="{{url('/images/Ono Eriko.png')}}"width="150">
-                <span class='font-semibold mt-1 text-sm text-[#888888]'>Ono Eriko</span>
-                <span class='font-semibold mt-1 text-sm text-black'>Hai, Miiko! 34</span>
-                <span class='font-bold mt-1 text-sm text-black'>Rp 51.000</span>
-            </div>
+            @foreach ($books as $item)
+                <div class="flex flex-col text-left bg-white border border-black/[0.2] p-4 rounded-lg shadow-md" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+                    <img class='' src="{{($item->image)}}"width="150">
+                    <span class='font-semibold mt-1 text-sm text-[#888888]'>{{$item->authors->name}}</span>
+                    <span class='font-semibold mt-1 text-sm text-black'>{{$item->title}}</span>
+                    <span class='font-bold mt-1 text-sm text-black'>Rp {{$item->price}}</span>
+                </div>
+            @endforeach
+
         </div>
     </div>
     <div class="bg-[#EDEDED] flex flex-col justify-center items-center py-5">
