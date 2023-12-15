@@ -22,15 +22,15 @@ class GenreSeeder extends Seeder
         ]);
 
         DB::table('genres')->insert([
-            'genre' => 'Drama',
+            'genre' => 'Psychology',
         ]);
 
         DB::table('genres')->insert([
-            'genre' => 'Horror',
+            'genre' => 'Fantasi',
         ]);
 
         DB::table('genres')->insert([
-            'genre' => 'Thriller',
+            'genre' => 'Fiksi',
         ]);
 
         DB::table('genres')->insert([
