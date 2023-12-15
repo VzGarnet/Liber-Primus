@@ -4,6 +4,6 @@
     
 @endsection
 
-@section('body')
+@section('content')
     
 @endsection
