@@ -16,12 +16,9 @@ class BookController extends Controller
         $authors = Author::all();
         return view('home', compact('books', 'best_sellers', 'authors'));
     }
-
-    public function book(){
-        $books = Book::all();
-        $genres = Genre::all();
-        $publishers = Publisher::all();
-        return view('book', compact('books', 'genres', 'publishers'));
+    
+    public function detail($id){
+        $books = Book::findOrFail($id);
+        return view('bookdetail',compact('books'));
     }
-
 }

@@ -31,12 +31,15 @@
         </div>                         
         <div class="grid grid-cols-5 pb-5 gap-5 w-[90%]">
             @foreach ($books as $item)
+            <a href="{{route('bookdetail',['id'=>$item->id])}}">
                 <div class="flex flex-col text-center bg-white border border-black/[0.2] p-4 rounded-lg shadow-md" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
                     <img class='w-[15vw] h-[40vh]' src="{{($item->image)}}"width="150">
                     <span class='font-semibold mt-1 text-sm text-[#888888]'>{{$item->authors->name}}</span>
                     <span class='font-semibold mt-1 text-sm text-black'>{{$item->title}}</span>
                     <span class='font-bold mt-1 text-sm text-black'>Rp{{number_format($item->price, 2, ',', '.')}}</span>
                 </div>
+            </a>
+         
             @endforeach
 
         </div>
