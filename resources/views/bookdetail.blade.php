@@ -36,7 +36,7 @@
                             <button class="text-xl font-bold text-white">Add to cart</button>
                         </div>
                         <div class="border rounded-md py-2 px-4 border-black w-40 text-center shadow-md" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.5);">
-                            <form action="{{route('wish',$books->id)}}" method="POST">
+                            {{-- <form action="{{route('wish',$books->id)}}" method="POST">
                                 @csrf
                                 <button class="text-xl font-bold">
                                     @if ($wishlist)
@@ -51,7 +51,7 @@
 
 
                                 </button>
-                            </form>
+                            </form> --}}
                             
                             
                         </div>
