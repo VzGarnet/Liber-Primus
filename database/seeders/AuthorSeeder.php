@@ -15,27 +15,27 @@ class AuthorSeeder extends Seeder
     {
         DB::table('authors')->insert([
             'name' => 'Ono Eriko',
-            'image' => '/images/OnoEriko.jpg',
+            'image' => '/images/author/OnoEriko.jpg',
         ]);
 
         DB::table('authors')->insert([
             'name' => 'Leila S. Chudori',
-            'image' => '/images/LeilaSChudori.jpeg',
+            'image' => '/images/author/LeilaSChudori.jpeg',
         ]);
 
         DB::table('authors')->insert([
             'name' => 'Axie Oh',
-            'image' => '/images/AxieOh.jpg',
+            'image' => '/images/author/AxieOh.jpg',
         ]);
 
         DB::table('authors')->insert([
             'name' => 'James Clear',
-            'image' => '/images/JamesClear.png',
+            'image' => '/images/author/JamesClear.png',
         ]);
 
         DB::table('authors')->insert([
             'name' => 'Aka Akasaka',
-            'image' => '/images/AkaAkasaka.jpg',
+            'image' => '/images/author/AkaAkasaka.jpg',
         ]);
 
     }

@@ -21,7 +21,7 @@ class BookSeeder extends Seeder
             'price' => 24000,
             'publisher_id' => 2,
             'rating' => 4.2,
-            'image' => '\images\miko.jpg',
+            'image' => '\images\book\miko.jpg',
             'stock' => 10,
         ]);
 
@@ -33,7 +33,7 @@ class BookSeeder extends Seeder
             'price' => 92000,
             'publisher_id' => 3,
             'rating' => 4.0,
-            'image' => '\images\LautBercerita.jpg',
+            'image' => '\images\book\LautBercerita.jpg',
             'stock' => 10,
         ]);
 
@@ -45,7 +45,7 @@ class BookSeeder extends Seeder
             'price' => 92500,
             'publisher_id' => 2,
             'rating' => 3.9,
-            'image' => '\images\TheGirl.jpg',
+            'image' => '\images\book\TheGirl.jpg',
             'stock' => 10,
         ]);
 
@@ -57,7 +57,7 @@ class BookSeeder extends Seeder
             'price' => 86400,
             'publisher_id' => 2,
             'rating' => 4.7,
-            'image' => '\images\AtomicHabits.jpg',
+            'image' => '\images\book\AtomicHabits.jpg',
             'stock' => 10,
         ]);
 
@@ -69,7 +69,7 @@ class BookSeeder extends Seeder
             'price' => 38400,
             'publisher_id' => 3,
             'rating' => 3.8,
-            'image' => '\images\OshiNoKo1.jpg',
+            'image' => '\images\\book\OshiNoKo1.jpg',
             'stock' => 10,
         ]);
 
@@ -81,7 +81,7 @@ class BookSeeder extends Seeder
             'price' => 38400,
             'publisher_id' => 3,
             'rating' => 4.0,
-            'image' => '\images\OshiNoKo5.jpeg',
+            'image' => '\images\book\OshiNoKo5.jpeg',
             'stock' => 10,
         ]);
 
@@ -94,7 +94,7 @@ class BookSeeder extends Seeder
             'price' => 20000,
             'publisher_id' => 2,
             'rating' => 4.4,
-            'image' => '\images\HaiMiiko31.jpg',
+            'image' => '\images\book\HaiMiiko31.jpg',
             'stock' => 10,
         ]);
 
@@ -108,7 +108,7 @@ class BookSeeder extends Seeder
             'price' => 70400,
             'publisher_id' => 1,
             'rating' => 3.5,
-            'image' => '\images\HabitJournal.jpg',
+            'image' => '\images\book\HabitJournal.jpg',
             'stock' => 10,
         ]);
 
@@ -120,7 +120,7 @@ class BookSeeder extends Seeder
             'price' => 71200,
             'publisher_id' => 2,
             'rating' => 3.9,
-            'image' => '\images\Xoxo.jpg',
+            'image' => '\images\book\Xoxo.jpg',
             'stock' => 10,
         ]);
 
@@ -132,7 +132,7 @@ class BookSeeder extends Seeder
             'price' => 38400,
             'publisher_id' => 3,
             'rating' => 4.7,
-            'image' => '\images\OshiNoKo6.jpg',
+            'image' => '\images\book\OshiNoKo6.jpg',
             'stock' => 10,
         ]);
 
