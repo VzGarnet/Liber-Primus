@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layout')
 
 @section('head')
     
 @endsection
 
-@section('content')
+@section('body')
     <div class='bg-[#C6EFEF] flex justify-center items-center py-5'>
         <div class="mr-28">
             <h1 class="font-bold text-5xl mb-3">Welcome To LiberPrimus</h1>

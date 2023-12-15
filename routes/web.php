@@ -3,11 +3,13 @@
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\GenreController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublisherController;
 use App\Http\Controllers\ThreadController;
 use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('home');
@@ -38,3 +40,10 @@ Route::get('/forum', [ThreadController::class, 'forum']);
 Route::get('/forum', [PostController::class, 'forum']);
 
 Route::get('/wishlist', [WishlistController::class, 'wishlist']);
+Auth::routes();
+
+Route::get('/home', [BookController::class, 'home']);
+
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
