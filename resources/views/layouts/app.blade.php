@@ -26,7 +26,7 @@
                     </div>
                 </div> 
             </div>    
-            <input type="text" placeholder="Search" class="border border-black rounded-md py-2 px-4 ml-4 max-w-[700px] w-full bg-[#767680] bg-opacity-0" />
+            <input type="text" placeholder="Search" class="border border-black rounded-md py-2 px-4 ml-4 max-w-[700px] w-full bg-[#767680] bg-opacity-0" style="color:aliceblue"/>
             <div>
                 <ul class="flex justify-between items-center">
                     <a href="#"><img class="w-8 ml-5" src="{{url('/images/wishlist.png')}}" alt="Image"></a>
