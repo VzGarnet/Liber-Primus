@@ -15,4 +15,9 @@ class BookController extends Controller
         return view('home', compact('books', 'best_sellers', 'authors'));
     }
 
+    public function detail($id){
+        $books = Book::findOrFail($id);
+        return view('bookdetail',compact('books'));
+    }
+
 }

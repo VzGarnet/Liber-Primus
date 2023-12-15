@@ -47,3 +47,8 @@ Route::get('/home', [BookController::class, 'home']);
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::get('/bookdetail/{id}',[BookController::class,'detail'])->name('bookdetail');
+
+//wishlist
+

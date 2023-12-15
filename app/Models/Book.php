@@ -19,7 +19,7 @@ class Book extends Model
     }
 
     public function publishers() {
-        return $this->belongsTo(Publisher::class);
+        return $this->belongsTo(Publisher::class,'publisher_id');
     }
 
     // primary key
