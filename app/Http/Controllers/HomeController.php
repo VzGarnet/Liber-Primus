@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Book;
+use App\Models\Author;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $books = Book::all();
+        $best_sellers = Book::orderBy('rating', 'desc')->take(5)->get();
+        $authors = Author::all();
+        return view('home', compact('books', 'best_sellers', 'authors'));
     }
 }
