@@ -34,10 +34,10 @@ Route::get('/', [BookController::class, 'home']);
 
 Route::get('/author', [AuthorController::class, 'author']);
 
-Route::get('/book', [PublisherController::class, 'book']);
+Route::get('/book', [BookController::class, 'book']);
 
 Route::get('/forum', [ThreadController::class, 'forum']);
-Route::get('/forum', [PostController::class, 'forum']);
+// Route::get('/forum', [PostController::class, 'forum']);
 
 Route::get('/wishlist', [WishlistController::class, 'wishlist']);
 Auth::routes();
