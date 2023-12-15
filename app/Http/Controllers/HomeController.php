@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Author;
 use App\Models\Book;
 use Illuminate\Http\Request;
+use App\Models\Book;
+use App\Models\Author;
 
 class HomeController extends Controller
 {
