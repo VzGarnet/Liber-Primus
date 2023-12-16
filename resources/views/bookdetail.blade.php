@@ -28,7 +28,7 @@
                             <button class="text-xl font-bold mx-2" onclick="changeNumber(1)">+</button>
                         </div>
                         <div class="w-full">
-                            <span class="text-lg">Stock: 10k+++</span>
+                            <span class="text-lg">Stock: {{$books->stock}}</span>
                         </div>
                     </div>
                     <div class="flex my-6">
