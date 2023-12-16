@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('author_id');
             $table->string('isbn');
             $table->text('synopsis');
+            $table->float('rating');
             $table->integer('price');
             $table->foreignId('publisher_id');
             $table->string('image');
