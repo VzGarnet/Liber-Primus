@@ -25,47 +25,59 @@
     </div>
 
     {{-- Filter --}}
-    <div class="flex">
-        <div class="filter border-3">
-            <form action="">
-                <h2 class="font-bold">Filter</h2>
-                <h5 class="">Genre</h5>
+    <div class="flex bg-[#EDEDED]">
+        <div class="border border-black rounded-lg bg-[#EDEDED] w-[20%] m-10 h-[40%]">
+            <form action="" class="ml-5">
+                <h2 class="font-bold text-lg pb-2 pt-2">Filter</h2>
+                <h5 class="font-semibold text-lg">Genre</h5>
                 @foreach ($genres as $genre)
                     <input type="radio" name="genre" id="{{$genre->genre}}">
                     <label for="{{$genre->genre}}">{{$genre->genre}}</label><br>
                 @endforeach
                 <div class="line"></div>
-                <h5 class="">Publisher</h5>
+                <h5 class="font-semibold text-lg pt-4">Publisher</h5>
                 @foreach ($publishers as $publisher)
                     <input type="radio" name="publisher" id="{{$publisher->name}}">
                     <label for="{{$publisher->name}}">{{$publisher->name}}</label><br>
                 @endforeach
                 <div class="line"></div>
-                <h5>Price</h5>
+                <h5 class="font-semibold text-lg pt-4">Price</h5>
                 <input type="radio" name="price" id="low">
                 <label for="low">Lowest</label><br>
                 <input type="radio" name="price" id="high">
                 <label for="high">Highest</label><br>
                 <div class="line"></div>
-                <h5>Stock</h5>
+
+                <h5 class="font-semibold text-lg pt-4">Stock</h5>
                 <input type="radio" name="stock" id="all">
                 <label for="all">All</label><br>
                 <input type="radio" name="stock" id="avail">
                 <label for="avail">Available</label><br>
 
-                <input type="reset" value="Reset">
+                <div class="flex pt-4 justify-center -ml-5">
+                    <input class="mt-4 border border-black py-2 px-2 rounded-md w-[60%] text-center font-bold" type="reset" value="Reset">
+                </div>
             </form>
         </div>
-        <div class="list border-3">
-            <div class="bg-[#EDEDED] flex flex-col justify-center items-center py-5">
+        <div class="w-full">
+            <div class="flex pt-5 ml-64">
+                <a class="font-bold text-2xl text-black underline" href="/book" style="text-decoration-color: #01C7C8;">Book</a>
+                <a class="font-bold text-2xl ml-5 text-[#888888]" href="/author">Author</a>
+            </div>
+            <div class="bg-[#EDEDED] flex flex-col items-center py-4">
                 <div class="grid grid-cols-3 gap-5 w-[60%]">
                     @foreach ($books as $item)
-                        <div class="flex flex-col text-center bg-white border border-black/[0.2] p-4 rounded-lg shadow-md" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
-                            <img class='w-[15vw] h-[40vh]' src="{{($item->image)}}"width="150">
-                            <span class='font-semibold mt-1 text-sm text-[#888888]'>{{$item->authors->name}}</span>
-                            <span class='font-semibold mt-1 text-sm text-black'>{{$item->title}}</span>
-                            <span class='font-bold mt-1 text-sm text-black'>Rp{{number_format($item->price, 2, ',', '.')}}</span>
-                        </div>
+                        <a href="{{route('bookdetail',['id'=>$item->id])}}" class="bg-white border border-black/[0.2] p-4 rounded-lg shadow-md" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+                            <div class="flex flex-col text-left">
+                                <img class='w-[15vw] h-[40vh]' src="{{($item->image)}}">
+                                <span class='font-semibold mt-1 text-sm text-[#888888]'>{{$item->authors->name}}</span>
+                                <span class='font-semibold mt-1 text-sm text-black'>{{$item->title}}</span>
+                                <span class='font-bold mt-1 text-sm text-black'>Rp {{number_format($item->price, 2, ',', '.')}}</span>
+                                <div class="mt-4 border border-black py-2 px-2 rounded-md w-30 text-center">
+                                    <button class="text-lg font-medium text-black">Add to cart</button>
+                                </div>
+                            </div>
+                        </a>
                     @endforeach
                 </div> 
             </div>
