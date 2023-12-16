@@ -7,7 +7,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PublisherController;
 use App\Http\Controllers\ThreadController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WishlistController;
+use App\Models\Transaction;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -52,3 +54,6 @@ Route::get('/bookdetail/{id}',[BookController::class,'detail'])->name('bookdetai
 
 //wishlist
 
+Route::get('/cart/{id}', [TransactionController::class, 'shopping=cart'])->name('cart');
+
+Route::get('/checkout', [TransactionController::class, 'checkout']);

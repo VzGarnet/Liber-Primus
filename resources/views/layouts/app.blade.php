@@ -14,7 +14,7 @@
       <div class="flex items-center justify-between py-3">
         <div class="flex items-center justify-evenly w-full">
             <div class="flex items-center">
-                <a class="px-6" href=""><img class="w-16" src="{{url('/images/logo.png')}}" alt="Image" /></a>
+                <a class="px-6" href="/home"><img class="w-16" src="{{url('/images/logo.png')}}" alt="Image" /></a>
                 <div class="relative" id="category">
                     <button class="text-white focus:outline-none">
                       Category
@@ -46,7 +46,7 @@
                           </li>
                       @endif
                       @else
-                          <div class="relative" id="user" style="z-index: 10;">
+                          <div class="relative" id="user" style="z-index: 10; margin-left: 2vw;">
                               <button class="text-white focus:outline-none">
                                   {{ Auth::user()->name }}
                               </button>
