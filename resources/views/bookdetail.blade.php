@@ -8,14 +8,14 @@
     <div class="bg-[#EDEDED] py-10">
         <div class="bg-white rounded-lg mx-40">
             <div class="ml-20 flex py-20">
-                <div class="mr-20">
+                <div class="mr-20 w-[30%]">
                     <img class="w-[40vw] h-[70vh]" src="{{($books->image)}}" alt="">
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col mr-10 w-[60%]">
                     <h1 class="text-3xl font-semibold pb-6">{{$books->title}}</h1>
                     <h1 class="text-3xl font-bold pb-6">Rp {{number_format($books->price)}}</h1>
                     <h1 class="text-xl font-semibold">Book Description</h1>
-                    <h1 class="text-lg pb-6">{{$books->synopsis}}</h1>
+                    <h1 class="text-lg pb-6 text-justify">{{$books->synopsis}}</h1>
                     <h1 class="text-xl font-semibold pb-2">Detail</h1>
                     <h1 class="text-base font-bold text-[#777777]">ISBN</h1>
                     <h1 class="text-base font-semibold pb-2 text-[#777777]">{{$books->isbn}}</h1>
