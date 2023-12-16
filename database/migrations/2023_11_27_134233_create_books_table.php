@@ -19,7 +19,6 @@ return new class extends Migration
             $table->text('synopsis');
             $table->integer('price');
             $table->foreignId('publisher_id');
-            $table->float('rating');
             $table->string('image');
             $table->integer('stock');
             $table->timestamps();
