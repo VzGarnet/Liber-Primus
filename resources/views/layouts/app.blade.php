@@ -43,7 +43,7 @@
             <div>
                 <ul class="flex justify-between items-center">
                     <a href="/wishlist"><img class="w-8 ml-5" src="{{url('/images/wishlist.png')}}" alt="Image"></a>
-                    <a href="#"><img class="w-8 ml-5" src="{{url('/images/Forum.png')}}" alt="Image"></a>
+                    <a href="/forum"><img class="w-8 ml-5" src="{{url('/images/Forum.png')}}" alt="Image"></a>
                     <a href="#"><img class="w-10 ml-5" src="{{url('/images/Shopping.png')}}" alt="Image"></a>
       
                     @guest
