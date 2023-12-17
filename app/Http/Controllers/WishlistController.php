@@ -9,7 +9,7 @@ class WishlistController extends Controller
 {
     public function wishlist(){
         $wishlists = Wishlist::all();
-        return view('wishlist', compact('whislists'));
+        return view('wishlist', compact('wishlists'));
     }
 
     public function toggleWishlist(Request $request, $id){

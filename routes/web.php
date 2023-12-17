@@ -54,7 +54,7 @@ Route::get('/bookdetail/{id}',[BookController::class,'detail'])->name('bookdetai
 Route::get('/authordetail/{id}',[AuthorController::class, 'authordetail'])->name('authordetail');
 
 //wishlist
-Route::get('/wishlist', [WishlistController::class, 'wishlist']);
+Route::get('/wishlist', [BookController::class, 'wishlist']);
 
 Route::post('/bookdetail/{id}',[WishlistController::class, 'toggleWishlist'])->name('wish');
 

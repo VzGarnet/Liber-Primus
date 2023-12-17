@@ -30,12 +30,21 @@ class BookController extends Controller
         $wishlist = Wishlist::all();
         $clickedbooks = Book::findOrFail($id);
         $genre_id = BookGenre::where('book_id', '=', $id)->pluck('genre_id');
-        // $same_genres = BookGenre::where('genre_id', '=', $genre_id)->pluck('book_id');
         $books = Book::whereHas('genres', function ($query) use ($genre_id) {
             $query->whereIn('genre_id', $genre_id);
         })
         ->where('id', '!=', $id)
         ->get();
         return view('bookdetail', compact('clickedbooks', 'books', 'wishlist'));
+    }
+
+    public function wishlist(){
+        $wishlist = Wishlist::all();
+    
+        $books = Book::whereHas('wishlists', function ($query) use ($wishlist) {
+            $query->whereIn('book_id', $wishlist->pluck('book_id'));
+        })->get();
+    
+        return view('wishlist', compact('books'));
     }
 }
