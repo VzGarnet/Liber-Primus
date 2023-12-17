@@ -75,8 +75,8 @@
                                     <span class='font-semibold mt-1 text-sm text-black'>{{$item->title}}</span>
                                     <span class='font-bold mt-1 text-sm text-black'>Rp {{number_format($item->price, 2, ',', '.')}}</span>
                                 </div>
-                                <div class="mt-4 border border-black py-2 px-2 rounded-md w-30 text-center">
-                                    <button class="text-lg font-medium text-black">Add to cart</button>
+                                <div class="mt-4 border border-black py-2 px-2 rounded-md w-30 text-center transition duration-300 hover:bg-[#01C7C8] hover:text-white">
+                                    <button class="text-lg font-medium">Add to Cart</button>
                                 </div>
                             </div>
                         </a>
