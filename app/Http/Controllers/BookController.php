@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Author;
 use App\Models\Book;
+use App\Models\BookGenre;
 use App\Models\Genre;
 use App\Models\Publisher;
+use App\Models\Wishlist;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
@@ -25,7 +27,15 @@ class BookController extends Controller
     }
     
     public function detail($id){
-        $books = Book::findOrFail($id);
-        return view('bookdetail', compact('books'));
+        $wishlist = Wishlist::all();
+        $clickedbooks = Book::findOrFail($id);
+        $genre_id = BookGenre::where('book_id', '=', $id)->pluck('genre_id');
+        // $same_genres = BookGenre::where('genre_id', '=', $genre_id)->pluck('book_id');
+        $books = Book::whereHas('genres', function ($query) use ($genre_id) {
+            $query->whereIn('genre_id', $genre_id);
+        })
+        ->where('id', '!=', $id)
+        ->get();
+        return view('bookdetail', compact('clickedbooks', 'books', 'wishlist'));
     }
 }

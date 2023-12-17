@@ -41,7 +41,6 @@ Route::get('/book', [BookController::class, 'book']);
 Route::get('/forum', [ThreadController::class, 'forum']);
 // Route::get('/forum', [PostController::class, 'forum']);
 
-Route::get('/wishlist', [WishlistController::class, 'wishlist']);
 Auth::routes();
 
 Route::get('/home', [BookController::class, 'home']);
@@ -53,7 +52,11 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/bookdetail/{id}',[BookController::class,'detail'])->name('bookdetail');
 
 //wishlist
+Route::get('/wishlist', [WishlistController::class, 'wishlist']);
 
+Route::post('/bookdetail/{id}',[WishlistController::class, 'toggleWishlist'])->name('wish');
+
+//Cart
 Route::get('/cart/{id}', [TransactionController::class, 'shopping=cart'])->name('cart');
 
 Route::get('/checkout', [TransactionController::class, 'checkout']);
