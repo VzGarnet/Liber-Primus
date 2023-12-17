@@ -51,6 +51,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/bookdetail/{id}',[BookController::class,'detail'])->name('bookdetail');
 
+Route::get('/authordetail/{id}',[AuthorController::class, 'authordetail'])->name('authordetail');
+
 //wishlist
 Route::get('/wishlist', [WishlistController::class, 'wishlist']);
 
