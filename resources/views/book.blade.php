@@ -46,7 +46,7 @@
                     <label for="{{$publisher->name}}">{{$publisher->name}}</label><br>
                 @endforeach
 
-                <div class="line"></div>
+                {{-- <div class="line"></div>
                 <h5 class="font-semibold text-lg pt-4">Price</h5>
                 <input type="radio" name="price" id="low">
                 <label for="low">Lowest</label><br>
@@ -58,17 +58,17 @@
                 <input type="radio" name="stock" id="all">
                 <label for="all">All</label><br>
                 <input type="radio" name="stock" id="avail">
-                <label for="avail">Available</label><br>
+                <label for="avail">Available</label><br> --}}
 
-                <div class="flex pt-4 justify-center -ml-5">
-                    <input class="mt-4 border border-black py-2 px-2 rounded-md w-[60%] text-center font-bold" type="reset" value="Reset">
+                <div class="flex pt-4 justify-center -ml-5 flex-col items-center">
+                    <a href="{{route('bookall')}}" class="mt-4 border border-black py-2 px-2 rounded-md w-[60%] text-center font-bold">Reset</a>
                     <input class="mt-4 border border-black py-2 px-2 rounded-md w-[60%] text-center font-bold" type="submit">
                 </div>
             </form>
         </div>
         <div class="w-full">
             <div class="flex pt-5 ml-64">
-                <a class="font-bold text-2xl text-black underline" href="/book" style="text-decoration-color: #01C7C8;">Book</a>
+                <a class="font-bold text-2xl text-black underline" href="{{route('bookall')}}" style="text-decoration-color: #01C7C8;">Book</a>
                 <a class="font-bold text-2xl ml-5 text-[#888888]" href="/author">Author</a>
             </div>
         
