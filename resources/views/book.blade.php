@@ -61,7 +61,7 @@
                 <label for="avail">Available</label><br> --}}
 
                 <div class="flex pt-4 justify-center -ml-5 flex-col items-center">
-                    <input class="mt-4 border border-black py-2 px-2 rounded-md w-[60%] text-center font-bold" type="reset" value="Reset">
+                    <a href="{{route('bookall')}}" class="mt-4 border border-black py-2 px-2 rounded-md w-[60%] text-center font-bold">Reset</a>
                     <input class="mt-4 border border-black py-2 px-2 rounded-md w-[60%] text-center font-bold" type="submit">
                 </div>
             </form>

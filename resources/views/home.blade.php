@@ -18,7 +18,7 @@
         <div class="mr-28">
             <h1 class="font-bold text-5xl mb-3">Welcome To LiberPrimus</h1>
             <p class="text-3xl ml-12 mb-5">Go Explore and Find Your Favourite Book Here</p>
-            <a id="explore-button" class="text-2xl ml-64 px-4 py-2 border border-black rounded-lg bg-[#C6EFEF] font-semibold" href="/book">Explore Now</a>
+            <a id="explore-button" class="text-2xl ml-64 px-4 py-2 border border-black rounded-lg bg-[#C6EFEF] font-semibold" href="{{route('bookall')}}">Explore Now</a>
         </div>
         <div class="ml-36">
             <img src="{{url('/images/homebanner.png')}}">
