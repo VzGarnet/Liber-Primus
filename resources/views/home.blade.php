@@ -27,7 +27,7 @@
     <div class="bg-[#EDEDED] flex flex-col justify-center items-center py-5">
         <div class="flex pb-5 relative w-100 justify-center items-center">
             <h1 class="font-bold text-2xl underline" style="text-decoration-color: #01C7C8;">Recommendation</h1>
-            <a class="absolute top-0 right-20" href="/book"><h1 class="font-bold text-2xl underline text-[#01C7C8]">View All</h1></a>
+            <a class="absolute top-0 right-20" href="{{route('bookall')}}"><h1 class="font-bold text-2xl underline text-[#01C7C8]">View All</h1></a>
         </div>                         
         <div class="grid grid-cols-5 pb-5 gap-5 w-[90%]">
             @foreach ($books as $item)
@@ -51,7 +51,7 @@
     <div class="bg-[#EDEDED] flex flex-col justify-center items-center py-5">
         <div class="flex pb-5 relative w-100 justify-center items-center">
             <h1 class="font-bold text-2xl underline" style="text-decoration-color: #01C7C8;">Best Seller</h1>
-            <a class="absolute top-0 right-20" href="/book"><h1 class="font-bold text-2xl underline text-[#01C7C8]">View All</h1></a>
+            <a class="absolute top-0 right-20" href="{{route('bookall')}}"><h1 class="font-bold text-2xl underline text-[#01C7C8]">View All</h1></a>
         </div> 
         <div class="grid grid-cols-5 gap-5 w-[90%]">
             @foreach ($best_sellers as $item)

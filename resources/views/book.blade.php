@@ -46,7 +46,7 @@
                     <label for="{{$publisher->name}}">{{$publisher->name}}</label><br>
                 @endforeach
 
-                <div class="line"></div>
+                {{-- <div class="line"></div>
                 <h5 class="font-semibold text-lg pt-4">Price</h5>
                 <input type="radio" name="price" id="low">
                 <label for="low">Lowest</label><br>
@@ -58,9 +58,9 @@
                 <input type="radio" name="stock" id="all">
                 <label for="all">All</label><br>
                 <input type="radio" name="stock" id="avail">
-                <label for="avail">Available</label><br>
+                <label for="avail">Available</label><br> --}}
 
-                <div class="flex pt-4 justify-center -ml-5">
+                <div class="flex pt-4 justify-center -ml-5 flex-col items-center">
                     <input class="mt-4 border border-black py-2 px-2 rounded-md w-[60%] text-center font-bold" type="reset" value="Reset">
                     <input class="mt-4 border border-black py-2 px-2 rounded-md w-[60%] text-center font-bold" type="submit">
                 </div>
