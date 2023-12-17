@@ -37,7 +37,7 @@ Route::get('/author', [AuthorController::class, 'author']);
 Route::get('/book', [BookController::class, 'book']);
 
 Route::get('/forum', [ThreadController::class, 'forum']);
-// Route::get('/forum', [PostController::class, 'forum']);
+Route::post('/forum', [ThreadController::class, 'insertForum'])->name("insertForum");
 
 Auth::routes();
 
