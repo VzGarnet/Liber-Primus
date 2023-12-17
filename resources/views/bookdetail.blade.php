@@ -56,11 +56,11 @@
             <div class="flex pb-5 mt-5 relative w-100 justify-center items-center">
                 <h1 class="font-bold text-2xl underline" style="text-decoration-color: #01C7C8;">Same Genre</h1>
             </div> 
-            <div class="grid grid-cols-4 gap-5 w-[90%]">
+            <div class="grid grid-cols-4 gap-4 w-[90%]">
                 @foreach ($books as $item)
-                    <a href="{{route('bookdetail',['id'=>$item->id])}}" class="bg-white border border-black/[0.2] p-4 rounded-lg shadow-md" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+                    <a href="{{route('bookdetail',['id'=>$item->id])}}" class="flex flex-col bg-white border p-4 border-black/[0.2] rounded-lg shadow-md justify-center" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
                         <div class="flex flex-col text-left">
-                            <img class='w-[15vw] h-[40vh]' src="{{($item->image)}}">
+                            <img class='w-[15vw] h-[40vh] mx-auto' src="{{($item->image)}}">
                             <span class='font-semibold mt-1 text-sm text-[#888888]'>{{$item->authors->name}}</span>
                             <span class='font-semibold mt-1 text-sm text-black'>{{$item->title}}</span>
                             <span class='font-bold mt-1 text-sm text-black'>Rp{{number_format($item->price, 2, ',', '.')}}</span>
