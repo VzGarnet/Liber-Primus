@@ -69,4 +69,14 @@ class BookController extends Controller
     }
 
 
+    //Search
+    public function search(Request $request){
+        $query = $request->input('query');
+
+        $books = Book::where('title','like','%'.$query.'%')->get();
+        $publishers = Publisher::all();
+        return view('book',compact('books','publishers'));
+    }
+
+
 }

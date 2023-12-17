@@ -65,3 +65,6 @@ Route::get('/checkout', [TransactionController::class, 'checkout']);
 Route::get('/book/{identifier}', [BookController::class, 'showbycat'])->name('cat');
 
 Route::get('/book', [BookController::class, 'filterbycat'])->name('filter');
+
+//Search
+Route::get('/books/search',[BookController::class,'search'])->name('books.search');
