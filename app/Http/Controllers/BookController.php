@@ -38,8 +38,8 @@ class BookController extends Controller
         return view('bookdetail', compact('clickedbooks', 'books', 'wishlist'));
     }
 
-    public function wishlist(){
-        $wishlist = Wishlist::all();
+    public function wishlist(Request $request){
+        $wishlist = Wishlist::where('user_id', '=', $request->user()->id);
     
         $books = Book::whereHas('wishlists', function ($query) use ($wishlist) {
             $query->whereIn('book_id', $wishlist->pluck('book_id'));

@@ -20,10 +20,10 @@
                     <button class="text-white focus:outline-none">
                       Category
                     </button>
-                    <div class="absolute hidden mt-2 bg-white border rounded-md shadow-lg" style="z-index: 10;">
-                      <a href="#" class="block px-4 py-2 text-gray-800">Item 1</a>
-                      <a href="#" class="block px-4 py-2 text-gray-800">Item 2</a>
-                      <a href="#" class="block px-4 py-2 text-gray-800">Item 3</a>
+                    <div class="absolute hidden mt-2 bg-white border rounded-md shadow-lg w-[200px] z-10 px-4 py-2">
+                      <a href="#" class="block py-2 text-gray-800">Item 1</a>
+                      <a href="#" class="block py-2 text-gray-800">Item 2</a>
+                      <a href="#" class="block py-2 text-gray-800">Item 3</a>
                     </div>
                 </div> 
             </div>    

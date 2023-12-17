@@ -68,7 +68,7 @@
                 <div class="grid grid-cols-3 gap-5 w-[60%]">
                     @foreach ($books as $item)
                         <a href="{{route('bookdetail',['id'=>$item->id])}}" class="bg-white border border-black/[0.2] p-4 rounded-lg shadow-md" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
-                            <div class="flex flex-col text-left h-full justify-between">
+                            <div class="flex flex-col text-left w-full h-full justify-between">
                                 <div class="flex flex-col">
                                     <img class='w-[15vw] h-[40vh]' src="{{($item->image)}}">
                                     <span class='font-semibold mt-1 text-sm text-[#888888]'>{{$item->authors->name}}</span>

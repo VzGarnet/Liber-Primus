@@ -33,7 +33,12 @@
             @foreach ($books as $item)
             <a href="{{route('bookdetail',['id'=>$item->id])}}" class="bg-white border border-black/[0.2] p-4 rounded-lg shadow-md" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
                 <div class="flex flex-col text-left">
-                    <img class='w-[15vw] h-[40vh]' src="{{($item->image)}}">
+                    <div class="relative group pb-2 flex justify-center text-center">
+                        <img class='w-[15vw] h-[40vh]' src="{{($item->image)}}">
+                        <div class="opacity-0 w-full h-full absolute top-0 group-hover:!opacity-100 group-hover:bg-white overflow-hidden">
+                            <h1 class="text-base text-[#2C393F]">{{$item->synopsis}}</h1>
+                        </div>
+                    </div>
                     <span class='font-semibold mt-1 text-sm text-[#888888]'>{{$item->authors->name}}</span>
                     <span class='font-semibold mt-1 text-sm text-black'>{{$item->title}}</span>
                     <span class='font-bold mt-1 text-sm text-black'>Rp{{number_format($item->price, 2, ',', '.')}}</span>
@@ -52,7 +57,12 @@
             @foreach ($best_sellers as $item)
             <a href="{{route('bookdetail',['id'=>$item->id])}}" class="bg-white border border-black/[0.2] p-4 rounded-lg shadow-md" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
                 <div class="flex flex-col text-left">
-                    <img class='w-[15vw] h-[40vh]' src="{{($item->image)}}">
+                    <div class="relative group pb-2 flex justify-center text-center">
+                        <img class='w-[15vw] h-[40vh]' src="{{($item->image)}}">
+                        <div class="opacity-0 w-full h-full absolute top-0 group-hover:!opacity-100 group-hover:bg-white overflow-hidden">
+                            <h1 class="text-base text-[#2C393F]">{{$item->synopsis}}</h1>
+                        </div>
+                    </div>
                     <span class='font-semibold mt-1 text-sm text-[#888888]'>{{$item->authors->name}}</span>
                     <span class='font-semibold mt-1 text-sm text-black'>{{$item->title}}</span>
                     <span class='font-bold mt-1 text-sm text-black'>Rp{{number_format($item->price, 2, ',', '.')}}</span>
