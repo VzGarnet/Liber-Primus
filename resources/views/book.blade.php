@@ -27,19 +27,25 @@
     {{-- Filter --}}
     <div class="flex bg-[#EDEDED]">
         <div class="border border-black rounded-lg bg-[#EDEDED] w-[20%] m-10 h-[40%]">
-            <form action="" class="ml-5">
+            <form action="{{ route('filter') }}" method='GET' class="ml-5">
+                @csrf
+
                 <h2 class="font-bold text-lg pb-2 pt-2">Filter</h2>
-                <h5 class="font-semibold text-lg">Genre</h5>
+                {{-- <h5 class="font-semibold text-lg">Genre</h5>
+
                 @foreach ($genres as $genre)
-                    <input type="radio" name="genre" id="{{$genre->genre}}">
+                    <input type="radio" name="filterGenre" action='filterGenre' id="{{$genre->genre}}" value="{{$genre->id}}">
                     <label for="{{$genre->genre}}">{{$genre->genre}}</label><br>
-                @endforeach
+                @endforeach --}}
+
                 <div class="line"></div>
                 <h5 class="font-semibold text-lg pt-4">Publisher</h5>
+
                 @foreach ($publishers as $publisher)
-                    <input type="radio" name="publisher" id="{{$publisher->name}}">
+                    <input type="radio" name="publisherid" id="{{$publisher->name}}" value="{{$publisher->id}}">
                     <label for="{{$publisher->name}}">{{$publisher->name}}</label><br>
                 @endforeach
+
                 <div class="line"></div>
                 <h5 class="font-semibold text-lg pt-4">Price</h5>
                 <input type="radio" name="price" id="low">
@@ -56,6 +62,7 @@
 
                 <div class="flex pt-4 justify-center -ml-5">
                     <input class="mt-4 border border-black py-2 px-2 rounded-md w-[60%] text-center font-bold" type="reset" value="Reset">
+                    <input class="mt-4 border border-black py-2 px-2 rounded-md w-[60%] text-center font-bold" type="submit">
                 </div>
             </form>
         </div>

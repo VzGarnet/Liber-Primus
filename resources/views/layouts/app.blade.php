@@ -20,11 +20,23 @@
                     <button class="text-white focus:outline-none">
                       Category
                     </button>
-                    <div class="absolute hidden mt-2 bg-white border rounded-md shadow-lg w-[200px] z-10 px-4 py-2">
-                      <a href="#" class="block py-2 text-gray-800">Item 1</a>
-                      <a href="#" class="block py-2 text-gray-800">Item 2</a>
-                      <a href="#" class="block py-2 text-gray-800">Item 3</a>
-                    </div>
+                    @php
+                    $genres = [
+                        ['id'=>1, 'name'=>'Adventure'],
+                        ['id'=>2, 'name'=>'Romance'],
+                        ['id'=>3, 'name'=>'Psychology'],
+                        ['id'=>4, 'name'=>'Fantasi'],
+                        ['id'=>5, 'name'=>'Fiksi'],
+                        ['id'=>6, 'name'=>'Comedy'],
+                    ];
+                @endphp
+
+                <div class="absolute hidden mt-2 bg-white border rounded-md shadow-lg w-[200px] z-10 px-4 py-2">
+
+                    @foreach ($genres as $genre)
+                        <a href='{{ route('cat', $genre['id']) }}' class="block py-2 text-gray-800">{{$genre['name']}}</a>
+                    @endforeach
+                </div>
                 </div> 
             </div>    
             <input type="text" placeholder="Search" class="border border-black rounded-md py-2 px-4 ml-4 max-w-[700px] w-full bg-[#767680] bg-opacity-0" style="color:aliceblue"/>

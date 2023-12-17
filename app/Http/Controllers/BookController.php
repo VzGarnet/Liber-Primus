@@ -47,4 +47,26 @@ class BookController extends Controller
     
         return view('wishlist', compact('books'));
     }
+
+    public function showbycat($identifier){
+        $bookbycat = BookGenre::where('genre_id', $identifier)->pluck('book_id');
+
+        $books = Book::findOrFail($bookbycat);
+        $genres = Genre::all();
+        $publishers = Publisher::all();
+
+        return view('book', compact('bookbycat', 'books', 'genres', 'publishers'));
+    }
+
+    public function filterbycat(Request $request){
+        $getid = $request->input('publisherid');
+
+        $books = Book::where('publisher_id', $getid)->get();
+        $genres = Genre::all();
+        $publishers = Publisher::all();
+
+        return view('book', compact('books', 'genres', 'publishers'));
+    }
+
+
 }

@@ -60,3 +60,8 @@ Route::post('/bookdetail/{id}',[WishlistController::class, 'toggleWishlist'])->n
 Route::get('/cart/{id}', [TransactionController::class, 'shopping=cart'])->name('cart');
 
 Route::get('/checkout', [TransactionController::class, 'checkout']);
+
+//Filter
+Route::get('/book/{identifier}', [BookController::class, 'showbycat'])->name('cat');
+
+Route::get('/book', [BookController::class, 'filterbycat'])->name('filter');
