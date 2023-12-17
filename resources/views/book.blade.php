@@ -68,7 +68,7 @@
         </div>
         <div class="w-full">
             <div class="flex pt-5 ml-64">
-                <a class="font-bold text-2xl text-black underline" href="/book" style="text-decoration-color: #01C7C8;">Book</a>
+                <a class="font-bold text-2xl text-black underline" href="{{route('bookall')}}" style="text-decoration-color: #01C7C8;">Book</a>
                 <a class="font-bold text-2xl ml-5 text-[#888888]" href="/author">Author</a>
             </div>
             <div class="bg-[#EDEDED] flex flex-col items-center py-4">
