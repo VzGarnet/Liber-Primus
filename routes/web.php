@@ -29,9 +29,6 @@ Route::get('/bookdetail', function () {
     return view('bookdetail');
 });
 
-
-Route::get('/', [BookController::class, 'home']);
-
 Route::get('/author', [AuthorController::class, 'author']);
 
 Route::get('/bookall', [BookController::class, 'book'])->name('bookall');
@@ -41,10 +38,9 @@ Route::post('/forum', [ThreadController::class, 'insertForum'])->name("insertFor
 
 Auth::routes();
 
-Route::get('/home', [BookController::class, 'home']);
-
 Auth::routes();
 
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/bookdetail/{id}',[BookController::class,'detail'])->name('bookdetail');
