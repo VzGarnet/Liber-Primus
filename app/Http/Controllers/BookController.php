@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 class BookController extends Controller
 {
     public function home(){
-        $books = Book::all();
+        $books = Book::take(10)->get();
         $best_sellers = Book::orderBy('rating', 'desc')->take(5)->get();
         $authors = Author::take(2)->get();
         return view('home', compact('books', 'best_sellers', 'authors'));

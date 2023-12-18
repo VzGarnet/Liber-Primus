@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $books = Book::all();
+        $books = Book::take(10)->get();
         $best_sellers = Book::orderBy('rating', 'desc')->take(5)->get();
         $authors = Author::orderBy('name', 'asc')->take(2)->get();
         $threads = Thread::orderBy('created_at', 'desc')->take(3)->get();
