@@ -41,7 +41,7 @@
             </div> 
             
              {{--Search  --}}
-            <form action="{{route('books.search')}}" method="get">
+            <form action="{{route('books.search')}}" method="get" class="w-[40%]">
                 <input type="text" name="query" placeholder="Search" class="border border-black rounded-md py-2 px-4 ml-4 max-w-[700px] w-full bg-[#767680] bg-opacity-0" style="color:aliceblue"/>
             </form> 
             

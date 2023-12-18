@@ -25,10 +25,9 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/bookdetail', function () {
-    return view('bookdetail');
+Route::get('/cart', function () {
+    return view('cart');
 });
-
 
 Route::get('/', [BookController::class, 'home']);
 
