@@ -35,4 +35,9 @@ class Book extends Model
     public function genres() {
         return $this->belongsToMany(Genre::class, 'book_genres', 'book_id', 'genre_id');
     }
+
+    public function addToCart(){
+        return $this->hasMany(AddToCart::class);
+    }
+
 }

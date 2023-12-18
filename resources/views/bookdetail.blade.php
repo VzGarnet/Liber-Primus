@@ -38,11 +38,11 @@
                         <form action="{{route('wish',$clickedbooks->id)}}" method="POST">
                             @csrf
                             @if ($wishlist->contains('book_id', $clickedbooks->id))
-                                <button class="border rounded-md py-2 px-4 border-red-600 bg-red-600 w-40 h-14 text-center">
-                                    <h1 class="text-lg font-bold text-white">Unwishlist</h1>
+                                <button class="border rounded-md py-2 px-4 border-red-600 bg-red-600 w-40 h-14 text-center hover:bg-white hover:text-black">
+                                    <h1 class="text-lg font-bold">Unwishlist</h1>
                                 </button>
                             @else
-                                <button class="border rounded-md py-2 px-4 border-black w-40 h-14 text-center shadow-md" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.5);">
+                                <button class="border rounded-md py-2 px-4 border-black w-40 h-14 text-center shadow-md hover:bg-red-500 hover:text-white" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.5);">
                                     <h1 class="text-lg font-bold">Wishlist</h1>
                                 </button>
                             @endif
