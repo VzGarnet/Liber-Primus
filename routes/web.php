@@ -71,6 +71,4 @@ Route::get('/books/search',[BookController::class,'search'])->name('books.search
 Route::get('/success', [TransactionController::class, 'success'])->name('success');
 
 //Transaction History
-Route::get('/TransactionHistory',function(){
-    return view('TransactionHistory');
-});
+Route::get("/transactionhistory/{id}", [TransactionController::class, 'transactionhistory'])->name('transactionhistory');

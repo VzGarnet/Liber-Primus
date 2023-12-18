@@ -48,4 +48,11 @@ class TransactionController extends Controller
     public function success(){
         return view('transaction-success');
     }
+
+    public function transactionhistory($id){
+        $trs = Transaction::all();
+        $tr_user = Transaction::where($trs->user_id == $id);
+
+        return view('transactionhistory', compact('tr_user'));
+    }
 }
