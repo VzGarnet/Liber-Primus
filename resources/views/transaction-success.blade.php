@@ -1,34 +1,19 @@
 @extends('layouts.app')
 
+@section('head')
+    
+@endsection
+
 @section('content')
-
-<style>
-    #logo{
-        width: 20vw;
-        margin-left: 40vw;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-    }
-
-    #big-text{
-        font-family: cursive;
-        font-weight: 800;
-        font size: 56px;
-    }
-
-    #logo{}
-</style>
-
-<body>
-    <div class="text-center">
-        <img id="logo" src="{{asset('/images/Logo.png')}}" alt="">
-        <h1 id="big-text">Thank you for your purchase!</h1>
-        <p id="small-text">Your items will be delivered soon</p>
+    <div class="flex flex-col text-center justify-center items-center pt-14 py-10 bg-[#EDEDED]">
+        <div class="flex items-center flex-col">
+            <img src="{{asset('/images/Logo.png')}}" alt="" class="mb-3 w-[20vw] h-[30vh]">
+            <h1 class="text-xl font-bold">Thank you for your purchase!</h1>
+            <p class="text-lg font-semibold">Your items will be delivered soon</p>
+        </div>
+        <div class="flex flex-col text-center">
+            <a href="/" class="bg-[#01C7C8] rounded-md mt-4 py-2 px-1 text-white" id="btn1">Back to home page</a>
+            <a href="/#" class="bg-[#01C7C8] rounded-md my-6 py-2 px-1 text-white" id="btn2">See transaction history</a>
+        </div>
     </div>
-
-    <div class="text-center">
-        <a href="/" class="bg-[#2C393F] rounded-md" id="btn1"><div class="texts-btn">Back to home page</div></a>
-        <a href="/#" class="btn-container bg-[#2C393F] rounded-md" id="btn2"><div class="texts-btn">See transaction history</div></a>
-    </div>
-</body>
 @endsection

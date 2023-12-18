@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddToCartController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\GenreController;
@@ -53,7 +54,8 @@ Route::get('/wishlist', [BookController::class, 'wishlist']);
 Route::post('/bookdetail/{id}',[WishlistController::class, 'toggleWishlist'])->name('wish');
 
 //Cart
-Route::get('/cart/{id}', [TransactionController::class, 'shopping=cart'])->name('cart');
+Route::get('/cart', [BookController::class, 'cart']);
+Route::post('/addtocart', [AddToCartController::class, 'addToCart'])->name('addToCart');
 
 Route::get('/checkout', [TransactionController::class, 'checkout']);
 

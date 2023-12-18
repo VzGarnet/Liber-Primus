@@ -21,20 +21,22 @@
                     <h1 class="text-base font-semibold pb-2 text-[#777777]">{{$clickedbooks->isbn}}</h1>
                     <h1 class="text-base font-bold text-[#777777]">Penerbit</h1>
                     <h1 class="text-base font-semibold text-[#777777] pb-4">{{$clickedbooks->publishers->name}}</h1>
-                    <div class="flex items-center gap-10">
-                        <div class="flex justify-evenly items-center border border-black rounded-md p-2 w-[50%]">
-                            <button class="text-xl font-bold mx-2" onclick="changeNumber(-1)">-</button>
-                            <h1 id="numberDisplay" class="text-xl font-bold mx-4">1</h1>
-                            <button class="text-xl font-bold mx-2" onclick="changeNumber(1)">+</button>
+                    <form action="{{route('addToCart')}}" method="POST">
+                        @csrf
+                        <div class="flex items-center gap-10">
+                            <div class="flex justify-evenly items-center border border-black rounded-md p-2 w-[50%]">
+                                <input name="quantity" type="number" id="numberDisplay" class="text-xl font-bold mx-4" min="1" max="{{$clickedbooks->stock}}">
+                                <input type="hidden" name="book_id" value="{{$clickedbooks->id}}">
+                            </div>
+                            <div class="w-full">
+                                <span class="text-lg">Stock: {{$clickedbooks->stock}}</span>
+                            </div>
                         </div>
-                        <div class="w-full">
-                            <span class="text-lg">Stock: {{$clickedbooks->stock}}</span>
-                        </div>
-                    </div>
-                    <div class="flex my-6">
-                        <button class="text-lg border font-bold rounded-md py-2 px-4 border-black mr-8 w-40 h-14 text-center shadow-md hover:bg-[#01C7C8] hover:text-white" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.5);">
+                        <button type="submit" class="text-lg border font-bold rounded-md py-2 px-4 border-black mr-8 mt-8 w-40 h-14 text-center shadow-md hover:bg-[#01C7C8] hover:text-white" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.5);">
                             Add to Cart
                         </button>
+                    </form>
+                    <div class="flex my-6">
                         <form action="{{route('wish',$clickedbooks->id)}}" method="POST">
                             @csrf
                             @if ($wishlist->contains('book_id', $clickedbooks->id))
@@ -70,16 +72,4 @@
             </div>
         </div>
     </div>
-
-    <script>
-        let currentNumber = 1; // Initial value
-    
-        function changeNumber(amount) {
-            // Ensure the number doesn't go below 0
-            currentNumber = Math.max(0, currentNumber + amount);
-            
-            // Update the displayed number
-            document.getElementById('numberDisplay').innerText = currentNumber;
-        }
-    </script>
 @endsection

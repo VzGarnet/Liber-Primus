@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AddToCart;
 use App\Models\Author;
 use App\Models\Book;
 use App\Models\BookGenre;
@@ -47,6 +48,17 @@ class BookController extends Controller
     
         return view('wishlist', compact('books'));
     }
+
+    public function cart(Request $request){
+        $addtocart = AddToCart::where('user_id', '=', $request->user()->id);
+        
+        $books = Book::whereHas('addtocart', function ($query) use ($addtocart) {
+            $query->whereIn('book_id', $addtocart->pluck('book_id'));
+        })->get();
+        
+        return view('cart', compact('addtocart', 'books'));
+    }
+    
 
     public function showbycat($identifier){
         $bookbycat = BookGenre::where('genre_id', $identifier)->pluck('book_id');
