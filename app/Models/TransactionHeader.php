@@ -13,11 +13,11 @@ class TransactionHeader extends Model
         'user_id', 'total_price'
     ];
 
-    public function headers(){
-        return $this->hasMany(TransactionHeader::class);
+    public function transactions(){
+        return $this->hasMany(Transaction::class);
     }
 
-    public function users(){
+    public function user(){
         return $this->belongsTo(User::class);
     }
 }

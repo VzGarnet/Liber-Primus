@@ -57,7 +57,7 @@ Route::post('/bookdetail/{id}',[WishlistController::class, 'toggleWishlist'])->n
 Route::get('/cart', [BookController::class, 'cart']);
 Route::post('/addtocart', [AddToCartController::class, 'addToCart'])->name('addToCart');
 
-Route::get('/checkout', [TransactionController::class, 'checkout']);
+Route::get('/checkout', [TransactionController::class, 'checkout'])->name('checkout');
 
 //Filter
 Route::get('/book/{identifier}', [BookController::class, 'showbycat'])->name('cat');
@@ -70,5 +70,8 @@ Route::get('/books/search',[BookController::class,'search'])->name('books.search
 // success page
 Route::get('/success', [TransactionController::class, 'success'])->name('success');
 
-//Transaction History
+// Transaction History
 Route::get("/transactionhistory/{id}", [TransactionController::class, 'transactionhistory'])->name('transactionhistory');
+
+// Post transaction
+Route::post('/process-transaction', [TransactionController::class, 'processtransaction'])->name('process-transaction');

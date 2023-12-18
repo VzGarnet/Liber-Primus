@@ -14,8 +14,8 @@
                         <span class='font-semibold mt-1 text-2xl text-black'>Transaction ID: {{$tr->id}}</span>
                         <span class='font-semibold mt-1 text-lg text-[#888888]'>{{$tr->book->author->name}}</span>
                         <span class='font-semibold mt-1 text-2xl text-black'>{{$tr->book->title}}</span>
-                        <span class='font-bold mt-1 text-lg text-black'>Quantity: {{$tr->Quantity}}</span>
-                        <span class='font-bold mt-1 text-lg text-black'>Total Price: {{$tr->Quantity * $tr->Price}}</span>
+                        <span class='font-bold mt-1 text-lg text-black'>Quantity: {{$tr->quantity}}</span>
+                        <span class='font-bold mt-1 text-lg text-black'>Total Price: {{$tr->quantity * $tr->price}}</span>
                     </div>
                 </div>
             @endforeach

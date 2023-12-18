@@ -76,7 +76,8 @@
             <h1 id="title" class="">Billing Info</h1>
             <p id="subtitle" class="">Fill your billing information to continue your<br>transaction</p>
             <span class="" id="form-title"><img id="alert" src="\images\alert-icon.png" alt=""> Billing Address</span>
-            <form action="" method="post">
+            <form action="{{route('process-transaction')}}" method="post">
+                @csrf
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name"><br><br>
                 <label for="address">Adress:</label><br>

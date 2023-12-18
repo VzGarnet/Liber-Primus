@@ -50,9 +50,20 @@ class TransactionController extends Controller
     }
 
     public function transactionhistory($id){
-        $trs = Transaction::all();
-        $tr_user = Transaction::where($trs->user_id == $id);
+        $tr_user = TransactionHeader::where('user_id', $id)->get();
+        $tr_headers = TransactionHeader::with('user')->get();
 
-        return view('transactionhistory', compact('tr_user'));
+        return view('transactionhistory', compact('tr_user', 'tr_headers'));
+    }
+
+    public function processtransaction(Request $request, $id){
+        $user = $request->user()->id;
+        $add = Transaction::where('user_id', $user)->where('book_id',$id)->first();
+
+        $name = $request->input('name');
+        $address = $request->input('address');
+        $phone = $request->input('phone');
+
+        return redirect()->back();
     }
 }

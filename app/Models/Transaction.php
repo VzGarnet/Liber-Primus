@@ -13,8 +13,8 @@ class Transaction extends Model
         'transaction_id', 'book_id', 'quantity'
     ];
 
-    public function transactions() {
-        return $this->belongsTo(Transaction::class);
+    public function transactionheaders() {
+        return $this->belongsTo(TransactionHeader::class);
     }
 
     public function books() {

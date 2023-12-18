@@ -32,9 +32,11 @@
             @endphp
         @endforeach
         <h1 class="w-[70%] text-2xl font-bold text-right">Total Price : Rp {{number_format(($total), 2, ',', '.')}}</h1>
-        <button type="submit" class="text-lg border font-bold rounded-md py-2 px-4 border-black mt-8 w-40 h-14 text-center shadow-md hover:bg-[#01C7C8] hover:text-white" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.5);">
-            Check Out
-        </button>
+        <a href="{{route('checkout')}}" class="">
+            <button type="submit" class="text-lg border font-bold rounded-md py-2 px-4 border-black mt-8 w-40 h-14 text-center shadow-md hover:bg-[#01C7C8] hover:text-white" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.5);">
+                Check Out
+            </button>
+        </a>
     </div>
 </div>
 @endsection
