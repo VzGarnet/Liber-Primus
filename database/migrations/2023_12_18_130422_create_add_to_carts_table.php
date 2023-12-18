@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('add_to_carts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->references('id')->on('users');
-            $table->foreignId('book_id')->references('id')->on('books');
-            $table->integer('quantity');
+            $table->foreignId('user_id')->references('id')->on('users')->nullable();
+            $table->foreignId('book_id')->references('id')->on('books')->nullable();
+            $table->integer('quantity')->nullable();
             $table->timestamps();
         });
     }
