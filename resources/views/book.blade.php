@@ -3,6 +3,12 @@
         border: solid black 2px 2px;
         position: relative;
     }
+
+    #shop-now:hover{
+        border: 1px solid whitesmoke;
+        color: whitesmoke;
+        text-shadow: 1px 1px 2px black, 0 0 25px wheat, 0 0 5px lightblue;
+    }
 </style>
 
 @extends('layouts.app')
@@ -20,7 +26,7 @@
         <div class="flex flex-col items-center justify-center text-center">
             <h1 class="font-bold text-5xl mb-3">The World Belongs To Those</h1>
             <h1 class="font-bold text-5xl mb-12">Who Read</h1>
-            <a class="text-2xl px-4 py-2 border border-black rounded-lg bg-[#C6EFEF] font-semibold" href="">Shop Now</a>
+            <a id="shop-now" class="text-2xl px-4 py-2 border border-black rounded-lg bg-[#C6EFEF] font-semibold" href="">Shop Now</a>
         </div>
     </div>
 
