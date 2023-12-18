@@ -90,21 +90,13 @@
     <div class="bg-[#C6EFEF] flex flex-col justify-center items-center py-16">
         <h1 class="font-bold text-2xl underline pb-5" style="text-decoration-color: #01C7C8;">Newest Discussion</h1>
         <div class="grid grid-cols-3 gap-5">
-            <div class="w-72 flex flex-col text-center items-center bg-white border border-black/[0.2] px-4 pb-4 pt-1 rounded-lg shadow-md mt-10" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
-                <span class='font-semibold text-xl text-black'>Title</span>
-                <div class="flex-none w-100 border-t border-black"></div>
-                <span class='font-bold mt-1 text-sm text-black'>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.</span>
-            </div>
-            <div class="w-72 flex flex-col text-center items-center bg-white border border-black/[0.2] px-4 pb-4 pt-1 rounded-lg shadow-md mb-10" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
-                <span class='font-semibold text-xl text-black'>Title</span>
-                <div class="flex-none w-100 border-t border-black"></div>
-                <span class='font-bold mt-1 text-sm text-black'>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.</span>
-            </div>
-            <div class="w-72 flex flex-col text-center items-center bg-white border border-black/[0.2] px-4 pb-4 pt-1 rounded-lg shadow-md mt-10" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
-                <span class='font-semibold text-xl text-black'>Title</span>
-                <div class="flex-none w-100 border-t border-black"></div>
-                <span class='font-bold mt-1 text-sm text-black'>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.</span>
-            </div>
+            @foreach ($threads as $thread)
+                <div class="w-72 flex flex-col text-center items-center bg-white border border-black/[0.2] px-4 pb-4 pt-1 rounded-lg shadow-md mb-10" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+                    <span class='font-semibold text-xl text-black'>{{$thread->title}}</span>
+                    <div class="flex-none w-100 border-t border-black"></div>
+                    <span class='font-bold mt-1 text-sm text-black'>{{$thread->discussion}}</span>
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection

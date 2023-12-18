@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Author;
 use App\Models\Book;
+use App\Models\Thread;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,7 +28,8 @@ class HomeController extends Controller
     {
         $books = Book::all();
         $best_sellers = Book::orderBy('rating', 'desc')->take(5)->get();
-        $authors = Author::all();
-        return view('home', compact('books', 'best_sellers', 'authors'));
+        $authors = Author::orderBy('name', 'asc')->take(2)->get();
+        $threads = Thread::orderBy('created_at', 'desc')->take(3)->get();
+        return view('home', compact('books', 'best_sellers', 'authors', 'threads'));
     }
 }

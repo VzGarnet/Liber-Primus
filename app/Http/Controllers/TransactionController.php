@@ -24,4 +24,8 @@ class TransactionController extends Controller
     public function checkout(){
         return view('checkout');
     }
+
+    public function success(){
+        return view('transaction-success');
+    }
 }

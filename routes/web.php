@@ -68,3 +68,6 @@ Route::get('/book', [BookController::class, 'filterbycat'])->name('filter');
 
 //Search
 Route::get('/books/search',[BookController::class,'search'])->name('books.search');
+
+// success page
+Route::get('/success', [TransactionController::class, 'success'])->name('success');
