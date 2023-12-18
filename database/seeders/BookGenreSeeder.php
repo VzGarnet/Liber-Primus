@@ -67,6 +67,81 @@ class BookGenreSeeder extends Seeder
             'book_id'=> 10,
             'genre_id' => 5,
         ]);
+        
+        DB::table('book_genres')->insert([
+            'book_id'=> 11,
+            'genre_id' => 4,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 12,
+            'genre_id' => 2,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 13,
+            'genre_id' => 3,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 14,
+            'genre_id' => 4,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 15,
+            'genre_id' => 4,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 16,
+            'genre_id' => 1,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 16,
+            'genre_id' => 4,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 17,
+            'genre_id' => 1,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 17,
+            'genre_id' => 4,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 18,
+            'genre_id' => 4,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 18,
+            'genre_id' => 5,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 19,
+            'genre_id' => 5,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 19,
+            'genre_id' => 1,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 20,
+            'genre_id' => 4,
+        ]);
+                
+        DB::table('book_genres')->insert([
+            'book_id'=> 21,
+            'genre_id' => 4,
+        ]);
 
     }
 }
