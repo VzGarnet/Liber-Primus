@@ -15,6 +15,8 @@
         font-weight: 800;
         font size: 56px;
     }
+
+    #logo{}
 </style>
 
 <body>
@@ -23,7 +25,7 @@
     <p id="small-text">Your items will be delivered soon</p>
 
     <div class="buttonsuccess">
-        <a href="/home" class="btn-container" id="btn1"><div class="texts-btn">Back to home page</div></a>
+        <a href="/" class="btn-container bg-[]" id="btn1"><div class="texts-btn">Back to home page</div></a>
         <a href="/#" class="btn-container" id="btn2"><div class="texts-btn">See transaction history</div></a>
     </div>
 </body>
