@@ -10,7 +10,7 @@ class Transaction extends Model
     use HasFactory;
 
     protected $fillable = [
-        'transaction_id', 'book_id', 'quantity'
+        'transaction_headers_id', 'book_id', 'quantity'
     ];
 
     public function transactionheaders() {
@@ -18,6 +18,6 @@ class Transaction extends Model
     }
 
     public function books() {
-        return $this->belongsTo(Book::class);
+        return $this->belongsTo(Book::class, 'id');
     }
 }

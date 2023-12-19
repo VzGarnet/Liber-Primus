@@ -13,7 +13,7 @@
         </div>
         <div class="flex flex-col text-center">
             <a href="/" class="bg-[#01C7C8] rounded-md mt-4 py-2 px-1 text-white" id="btn1">Back to home page</a>
-            <a href="/#" class="bg-[#01C7C8] rounded-md my-6 py-2 px-1 text-white" id="btn2">See transaction history</a>
+            <a href="{{route('transactionhistory')}}" class="bg-[#01C7C8] rounded-md my-6 py-2 px-1 text-white" id="btn2">See transaction history</a>
         </div>
     </div>
 @endsection

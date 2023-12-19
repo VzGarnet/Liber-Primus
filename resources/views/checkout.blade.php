@@ -78,6 +78,8 @@
             <span class="" id="form-title"><img id="alert" src="\images\alert-icon.png" alt=""> Billing Address</span>
             <form action="{{route('process-transaction')}}" method="post">
                 @csrf
+                <input type="hidden" name="total" value={{$total_price}}>
+
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name"><br><br>
                 <label for="address">Adress:</label><br>

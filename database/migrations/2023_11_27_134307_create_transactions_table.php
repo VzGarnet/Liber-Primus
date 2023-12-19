@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('transaction_id');
-            $table->foreignId('book_id');
-            $table->integer('quantity');
+            $table->foreignId('transaction_headers_id')->nullable();
+            $table->foreignId('book_id')->nullable();
+            $table->integer('quantity')->nullable();
             $table->timestamps();
         });
     }
