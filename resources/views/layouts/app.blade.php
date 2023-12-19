@@ -69,8 +69,8 @@
                               <button class="text-white focus:outline-none">
                                   {{ Auth::user()->name }}
                               </button>
-                              <div class="absolute hidden mt-2 bg-white border rounded-md shadow-lg">
-                                <a href="{{route('transactionhistory')}}">Transaction History</a>
+                              <div class="absolute hidden mt-2 bg-white border rounded-md shadow-lg text-left w-[170px]">
+                                <a class="font-semibold ml-3" href="{{route('transactionhistory')}}">Transaction History</a>
                               <a class="dropdown-item" href="{{ route('logout') }}" style="font-weight: 600; padding: 1vw;"
                                   onclick="event.preventDefault();
                                                   document.getElementById('logout-form').submit();">
