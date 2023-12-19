@@ -13,10 +13,12 @@
         <div class="items-center justify-center flex py-5">
             <div class="grid grid-cols-5 gap-32 w-[90%]">
                 @foreach ($authors as $author)
-                    <div class="flex flex-col text-center">
-                        <img class="w-[20vw] h-[28vh] rounded-md" src="{{($author->image)}}" alt="">
-                        <span class="font-semibold text-lg">{{$author->name}}</span>
-                    </div>
+                    <a href="{{route('authordetail', ['id'=>$author->id])}}" class="">
+                        <div class="flex flex-col text-center">
+                            <img class="w-[20vw] h-[28vh] rounded-md" src="{{($author->image)}}" alt="">
+                            <span class="font-semibold text-lg">{{$author->name}}</span>
+                        </div>
+                    </a>
                 @endforeach
 
                 {{-- <div class="flex flex-col text-center">

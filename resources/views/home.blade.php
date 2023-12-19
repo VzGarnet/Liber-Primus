@@ -72,18 +72,23 @@
         </div> 
     </div>
     <div class="bg-[#EDEDED] flex flex-col justify-center items-center py-5">
-        <h1 class="font-bold text-2xl underline pb-5 " style="text-decoration-color: #01C7C8;">Author Spotlight</h1>
+        <div class="flex pb-5 relative w-100 justify-center items-center">
+            <h1 class="font-bold text-2xl underline pb-5 " style="text-decoration-color: #01C7C8;">Author Spotlight</h1>
+            <a class="absolute top-0 right-20" href="{{route('authorall')}}"><h1 class="font-bold text-2xl underline text-[#01C7C8]">View All</h1></a>
+        </div> 
         <div class="grid grid-cols-2 gap-3">
             @foreach ($authors as $author)
-                <div class="flex text-left rounded-3xl" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
-                    <img class='rounded-l-2xl w-[15vw] h-[30vh]' src="{{$author->image}}"width="150">
-                    <div class="flex flex-col bg-white border w-80 border-black/[0.2] p-4 rounded-r-2xl shadow-md">
-                        <span class='font-semibold mt-1 text-xs text-[#888888]'>Name: </span>
-                        <span class='font-bold mt-1 text-sm text-black'>{{$author->name}}</span>
-                        <span class='font-semibold mt-1 text-xs text-[#888888]'>About the author: </span>
-                        <span class='font-bold mt-1 text-sm text-black'>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.</span>
+                <a href="{{route('authordetail', ['id'=>$author->id])}}" class="">
+                    <div class="flex text-left rounded-3xl" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);">
+                        <img class='rounded-l-2xl w-[15vw] h-[30vh]' src="{{$author->image}}"width="150">
+                        <div class="flex flex-col bg-white border w-80 border-black/[0.2] p-4 rounded-r-2xl shadow-md">
+                            <span class='font-semibold mt-1 text-xs text-[#888888]'>Name: </span>
+                            <span class='font-bold mt-1 text-sm text-black'>{{$author->name}}</span>
+                            <span class='font-semibold mt-1 text-xs text-[#888888]'>About the author: </span>
+                            <span class='font-bold mt-1 text-sm text-black'>Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.</span>
+                        </div>
                     </div>
-                </div>
+                </a>
             @endforeach
         </div>
     </div>

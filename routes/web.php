@@ -30,7 +30,7 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
-Route::get('/author', [AuthorController::class, 'author']);
+Route::get('/author', [AuthorController::class, 'author'])->name('authorall');
 
 Route::get('/bookall', [BookController::class, 'book'])->name('bookall');
 

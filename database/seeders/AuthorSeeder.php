@@ -45,7 +45,7 @@ class AuthorSeeder extends Seeder
         
         DB::table('authors')->insert([
             'name' => 'J.S. Khairen',
-            'image' => '/images/author/J.S.Kahiren.png',
+            'image' => '/images/author/J.S.Khairen.png',
             'description' => 'Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas vel felis massa.',
         ]);
         
