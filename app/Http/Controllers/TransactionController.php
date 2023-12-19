@@ -56,14 +56,15 @@ class TransactionController extends Controller
         return view('transactionhistory', compact('tr_user', 'tr_headers'));
     }
 
-    public function processtransaction(Request $request, $id){
+    public function processtransaction(Request $request){
         $user = $request->user()->id;
-        $add = Transaction::where('user_id', $user)->where('book_id',$id)->first();
+        $book_id = $request->book_id;
+        $add = TransactionHeader::where('user_id', $user);
 
         $name = $request->input('name');
         $address = $request->input('address');
         $phone = $request->input('phone');
 
-        return redirect()->back();
+        return redirect()->route('success');
     }
 }
