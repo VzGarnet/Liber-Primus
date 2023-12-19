@@ -63,14 +63,20 @@ class TransactionController extends Controller
 
         $transid = TransactionHeader::latest('updated_at')->first();
 
-        foreach($allitem as $item)
+        foreach($allitem as $item) {
 
-        Transaction::create([
-            'transaction_headers_id' => $transid->id,
-            'book_id' => $item->book_id,
-            'quantity' => $item->quantity,
-        ]);
+            Transaction::create([
+                'transaction_headers_id' => $transid->id,
+                'book_id' => $item->book_id,
+                'quantity' => $item->quantity,
+            ]);
 
+            $book = Book::find($item->book_id);
+            $book->update([
+                'stock' => $book->stock - $item->quantity,
+            ]);
+
+        }
 
         AddToCart::truncate();
 
